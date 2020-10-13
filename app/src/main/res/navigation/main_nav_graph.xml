@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splshFragment">
+
+    <fragment
+        android:id="@+id/splshFragment"
+        android:name="com.coding180.com.cliniconboardingkit.SplshFragment"
+        android:label="fragment_splsh"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splshFragment_to_slideOneFragment"
+            app:destination="@id/slideOneFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/slideOneFragment"
+        android:name="com.coding180.com.cliniconboardingkit.SlideOneFragment"
+        android:label="fragment_slide_one"
+        tools:layout="@layout/fragment_slide_one" >
+        <action
+            android:id="@+id/action_slideOneFragment_to_slideTwoFragment"
+            app:destination="@id/slideTwoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/slideTwoFragment"
+        android:name="com.coding180.com.cliniconboardingkit.SlideTwoFragment"
+        android:label="SlideTwoFragment" >
+        <action
+            android:id="@+id/action_slideTwoFragment_to_slideThreeFragment"
+            app:destination="@id/slideThreeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/slideThreeFragment"
+        android:name="com.coding180.com.cliniconboardingkit.SlideThreeFragment"
+        android:label="SlideThreeFragment" />
+</navigation>
